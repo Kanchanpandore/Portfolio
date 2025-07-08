@@ -1,0 +1,274 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block title %}Home - Kanchan's Portfolio{% endblock %}
+
+{% block content %}
+
+<!-- ✅ Background Glow -->
+<section data-aos="fade-up" class="relative overflow-hidden">
+  <div class="absolute w-[500px] h-[500px] bg-orange-400 blur-[180px] opacity-20 rounded-full -z-10 top-[58%] left-[70%] transform -translate-x-1/2 -translate-y-1/2"></div>
+
+  <!-- ✅ Main Hero Section -->
+  {% comment %} <section class="flex flex-col-reverse md:flex-row items-center justify-between p-10 min-h-screen"> {% endcomment %}
+  <section class="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 py-10 md:min-h-screen gap-4 md:gap-10">
+
+
+
+    <!-- ✅ Left Side: Intro Text -->
+    <div class="md:w-1/2 text-center md:text-left">
+
+      <!-- Title and Role -->
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        I’m <span class="text-orange-400">Kanchan</span> 👋<br>
+        <span id="typed-text" class="text-orange-400">UI Designer</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-gray-300 mb-6">
+        Welcome to my portfolio website <br>
+        Web Developer | Coder
+      </p>
+
+      <!-- 🔗 Social Icons -->
+      <div class="flex gap-4 mt-6 mb-6 justify-center md:justify-start text-2xl text-orange-500">
+        <a href="https://github.com/Kanchanpandore" target="_blank" class="hover:text-orange-600">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kanchan-pandore-33450928a/" target="_blank" class="hover:text-orange-600">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:kanchanpandore31@gmail.com" target="_blank" class="hover:text-orange-600">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+     <!-- CTA Buttons -->
+      <div class="flex gap-4 justify-center md:justify-start">
+        {% comment %} <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded shadow">Hire me</a> {% endcomment %} 
+        <a href="#" class="border border-orange-500 text-orange-500 px-6 py-2 rounded hover:bg-orange-500 hover:text-white">Download Resume</a>
+      </div>
+    </div> 
+
+
+
+
+    <!-- ✅ Right Side: Oval + Image -->
+    <div class="md:w-1/2 flex justify-center mb-10 md:mb-0">
+      <div class="relative w-[320px] md:w-[450px] h-[450px]"> 
+
+        <!-- Tilted Oval -->
+        <img src="{% static 'img/oval.png' %}" alt="Tilted Oval"
+             class="absolute top-[38%] left-1/2 w-[120%] -translate-x-1/2 -translate-y-1/2 rotate-[25deg] z-0">
+
+        <!-- Your Image -->
+        {% comment %} <img src="{% static 'img/k1.png' %}" alt="Kanchan"
+             class="absolute top-[34%] left-[42%] w-[110%] md:w-[114%] -translate-x-1/2 -translate-y-1/2 z-10 object-contain"> {% endcomment %}
+
+             <img src="{% static 'img/k1.png' %}" alt="Kanchan"
+     class="absolute top-[34%] left-[42%] h-[480px] w-auto -translate-x-1/2 -translate-y-1/2 z-10 object-contain">
+
+      </div>
+    </div> 
+
+
+  </section>
+</section>
+
+
+
+
+
+<!-- ✅ Enhanced Skills Section -->
+<section id="skills" data-aos="fade-up" class="my-20 px-6 md:px-20">
+   <h2 class="text-4xl font-bold mb-10 text-center text-orange-400">My Skills</h2>
+
+  <!-- ✅ Programming Languages -->
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center mb-16">
+    
+    <!-- Skill Card -->
+    <div class="bg-[#1e293b]/60 backdrop-blur-lg border border-white/10 hover:scale-105 transition-transform p-6 rounded-xl text-center shadow-lg hover:shadow-orange-400/30">
+      <i class="fas fa-code text-3xl text-orange-400 mb-2"></i>
+      <p class="text-lg font-semibold text-gray-200">C++</p>
+    </div>
+
+    <div class="bg-[#1e293b]/60 backdrop-blur-lg border border-white/10 hover:scale-105 transition-transform p-6 rounded-xl text-center shadow-lg hover:shadow-orange-400/30">
+      <i class="fab fa-python text-3xl text-orange-400 mb-2"></i>
+      <p class="text-lg font-semibold text-gray-200">Python</p>
+    </div>
+
+    <div class="bg-[#1e293b]/60 backdrop-blur-lg border border-white/10 hover:scale-105 transition-transform p-6 rounded-xl text-center shadow-lg hover:shadow-orange-400/30">
+      <i class="fab fa-java text-3xl text-orange-400 mb-2"></i>
+      <p class="text-lg font-semibold text-gray-200">Java</p>
+    </div>
+
+    <div class="bg-[#1e293b]/60 backdrop-blur-lg border border-white/10 hover:scale-105 transition-transform p-6 rounded-xl text-center shadow-lg hover:shadow-orange-400/30">
+      <i class="fab fa-html5 text-3xl text-orange-400 mb-2"></i>
+      <p class="text-lg font-semibold text-gray-200">HTML & CSS</p>
+    </div>
+
+    <div class="bg-[#1e293b]/60 backdrop-blur-lg border border-white/10 hover:scale-105 transition-transform p-6 rounded-xl text-center shadow-lg hover:shadow-orange-400/30 col-span-2 md:col-span-1">
+      <i class="fab fa-js text-3xl text-orange-400 mb-2"></i>
+      <p class="text-lg font-semibold text-gray-200 break-words">JavaScript (Basics)</p>
+    </div>
+  </div>
+
+  <!-- ✅ Frameworks & Tools -->
+  <h3 class="text-2xl font-semibold text-center text-orange-300 mb-8">
+    <i class="fas fa-tools mr-2"></i> Frameworks & Tools
+  </h3>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 justify-center">
+
+    <!-- Django -->
+    <div class="bg-[#1e293b]/60 backdrop-blur-lg border border-white/10 hover:scale-105 transition-transform p-6 rounded-xl text-center shadow-lg hover:shadow-orange-400/30">
+      <i class="fab fa-python text-3xl text-orange-400 mb-2"></i>
+      <p class="text-gray-200 font-semibold">Django (Beginner)</p>
+    </div>
+
+    <!-- Tailwind -->
+    <div class="bg-[#1e293b]/60 backdrop-blur-lg border border-white/10 hover:scale-105 transition-transform p-6 rounded-xl text-center shadow-lg hover:shadow-orange-400/30">
+      <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" class="w-8 h-8 mx-auto mb-2" />
+      <p class="text-gray-200 font-semibold">Tailwind CSS</p>
+    </div>
+
+    <!-- Bootstrap -->
+    <div class="bg-[#1e293b]/60 backdrop-blur-lg border border-white/10 hover:scale-105 transition-transform p-6 rounded-xl text-center shadow-lg hover:shadow-orange-400/30">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" class="w-8 h-8 mx-auto mb-2" />
+      <p class="text-gray-200 font-semibold">Bootstrap (Basics)</p>
+    </div>
+
+    <!-- Tools -->
+    <div class="bg-[#1e293b]/60 backdrop-blur-lg border border-white/10 hover:scale-105 transition-transform p-6 rounded-xl text-center shadow-lg hover:shadow-orange-400/30">
+      <div class="flex justify-center gap-3 mb-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" class="w-6 h-6">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-6 h-6">
+        <i class="fab fa-github text-xl text-white"></i>
+      </div>
+      <p class="text-gray-200 font-semibold">VS Code, Git, GitHub</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- ✅ Projects Section -->
+<section id="projects" class="py-20 px-4 bg-[#0f172a] text-white text-center">
+  <h2 class="text-4xl font-bold text-orange-400 mb-12"> My Projects</h2>
+  
+
+  <!-- 🌟 Project Cards Container -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+    <!-- 📌 Project 1 -->
+    <div class="bg-[#1e293b]/60 backdrop-blur-xl border border-white/10 rounded-2xl shadow-lg p-6 text-left hover:shadow-orange-500/20 transition hover:scale-[1.02] duration-300">
+      <h3 class="text-xl font-bold text-orange-300 mb-2 flex items-center gap-2"> Assignment Monitoring System</h3>
+      <p class="text-gray-300 mb-4 leading-relaxed">
+        A Django web app where teachers post assignments and students receive email alerts. Features login authentication, assignment dashboard, and real-time notifications using Django Signals.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-sm font-medium">Django</span>
+        <span class="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-sm font-medium">MySQL</span>
+        <span class="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-sm font-medium">Bootstrap</span>
+        <span class="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-sm font-medium">SMTP</span>
+      </div>
+    </div>
+
+    <!-- 🚗 Project 2 -->
+    <div class="bg-[#1e293b]/60 backdrop-blur-xl border border-white/10 rounded-2xl shadow-lg p-6 text-left hover:shadow-orange-500/20 transition hover:scale-[1.02] duration-300">
+      <h3 class="text-xl font-bold text-orange-300 mb-2 flex items-center gap-2">Gesture-Controlled IoT Car</h3>
+      <p class="text-gray-300 mb-4 leading-relaxed">
+        Control a robot car using hand gestures via webcam. Built with OpenCV and MediaPipe for gesture recognition and ESP8266 for real-time movement via WebSockets.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-sm font-medium">Python</span>
+        <span class="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-sm font-medium">OpenCV</span>
+        <span class="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-sm font-medium">MediaPipe</span>
+        <span class="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-sm font-medium">ESP8266</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ✅ About Me Section -->
+<section id="about" data-aos="zoom-in" class="my-20 px-6 max-w-4xl mx-auto">
+  <h2 class="text-4xl font-bold text-center text-orange-400 mb-10">About Me</h2>
+
+  <!-- Card Container -->
+  <div class="bg-[#1e293b] text-gray-300 rounded-3xl shadow-xl p-8 backdrop-blur-md border border-white/10 transition-all duration-300 hover:shadow-orange-400/20 space-y-6">
+
+    <!-- Paragraphs -->
+    <p class="text-lg leading-relaxed">
+      Hello! I'm <span class="font-semibold text-orange-400">Kanchan Pandore</span>, currently pursuing Computer Science Engineering at Pimpri Chinchwad University.
+      I'm a passionate learner who enjoys building web applications and exploring the world of technology.
+    </p>
+
+    <p class="text-lg leading-relaxed">
+    I have hands-on experience with HTML, CSS, C++, and currently exploring Data Science, AI, and web development using Django.
+    My goal is to work on real-world projects, participate in hackathons, and discover the tech field that excites me the most.
+    </p>
+
+    <p class="text-lg leading-relaxed">
+      I love solving problems, designing interfaces, and writing clean code. Let's build something amazing together!
+    </p>
+
+    <!-- Call to Action -->
+    <div class="text-center">
+      <a href="#contact"
+         class="inline-block mt-4 px-6 py-2 rounded-full bg-orange-500 hover:bg-orange-600 transition-all duration-300 text-white font-semibold shadow-lg hover:shadow-xl">
+        Let’s Connect
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ✅ Contact Section -->
+<section id="contact" data-aos="fade-up" class="py-20 px-4 bg-[#0f172a] text-white text-center">
+  <h2 class="text-4xl font-bold text-orange-400 mb-12">Let's Get in Touch</h2>
+
+  <!-- Contact Card -->
+  <div class="mx-auto w-full max-w-2xl bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl shadow-2xl p-8 transition-all duration-300 hover:shadow-orange-400/20">
+
+    <!-- 🔗 GitHub -->
+    <div class="mb-6 flex items-center justify-start gap-4 text-lg hover:scale-105 transition-transform duration-300">
+      <i class="fab fa-github text-orange-400 text-2xl animate-pulse"></i>
+      <a href="https://github.com/Kanchanpandore" target="_blank" class="hover:underline break-all">
+        github.com/Kanchanpandore
+      </a>
+    </div>
+
+    <!-- 🔗 LinkedIn -->
+    <div class="mb-6 flex items-center justify-start gap-4 text-lg hover:scale-105 transition-transform duration-300">
+      <i class="fab fa-linkedin text-orange-400 text-2xl animate-pulse"></i>
+      <a href="https://www.linkedin.com/in/kanchan-pandore-33450928a/" target="_blank" class="hover:underline break-all">
+        linkedin.com/in/kanchan-pandore
+      </a>
+    </div>
+
+    <!-- ✉️ Email -->
+    <div class="mb-6 flex items-center justify-start gap-4 text-lg hover:scale-105 transition-transform duration-300">
+      <i class="fas fa-envelope text-orange-400 text-2xl animate-pulse"></i>
+      <a href="mailto:kanchanpandore31@gmail.com" class="hover:underline break-all">
+        kanchanpandore31@gmail.com
+      </a>
+    </div>
+
+    <!-- 💬 CTA Button -->
+    <div class="mt-8">
+      <a href="mailto:kanchanpandore31@gmail.com"
+         class="px-6 py-3 bg-orange-500 hover:bg-orange-600 rounded-full shadow-lg text-white font-semibold transition-all duration-300 hover:shadow-orange-400">
+        Send a Message 📧
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+{% endblock %}

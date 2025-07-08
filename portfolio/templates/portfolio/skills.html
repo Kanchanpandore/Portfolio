@@ -1,0 +1,45 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block title %}Skills - Kanchan's Portfolio{% endblock %}
+
+{% block content %}
+<section data-aos="fade-up" class="min-h-screen p-10">
+  <h2 class="text-4xl font-bold text-orange-400 mb-8 text-center">My Skills</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Programming Languages -->
+    <div class="bg-[#1e293b] p-6 rounded-xl shadow-md">
+      <h3 class="text-xl font-semibold text-orange-400 mb-4"><i class="fas fa-code mr-2"></i>Programming</h3>
+      <ul class="list-disc list-inside text-gray-300 space-y-1">
+        <li>C++</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>HTML & CSS</li>
+        <li>JavaScript (Basics)</li>
+      </ul>
+    </div>
+
+    <!-- Frameworks -->
+    <div class="bg-[#1e293b] p-6 rounded-xl shadow-md">
+      <h3 class="text-xl font-semibold text-orange-400 mb-4"><i class="fas fa-laptop-code mr-2"></i>Frameworks & Tools</h3>
+      <ul class="list-disc list-inside text-gray-300 space-y-1">
+        <li>Django (Beginner)</li>
+        <li>Tailwind CSS</li>
+        <li>Bootstrap (Basics)</li>
+        <li>VS Code, GitHub</li>
+      </ul>
+    </div>
+
+    {% comment %} <!-- Interests -->
+    <div class="bg-[#1e293b] p-6 rounded-xl shadow-md">
+      <h3 class="text-xl font-semibold text-orange-400 mb-4"><i class="fas fa-brain mr-2"></i>Learning & Interests</h3>
+      <ul class="list-disc list-inside text-gray-300 space-y-1">
+        <li>Data Science & ML</li>
+        <li>UI Design</li>
+        <li>AI Projects</li>
+        <li>Hackathons</li>
+      </ul>
+    </div> {% endcomment %}
+  </div>
+</section>
+{% endblock %}

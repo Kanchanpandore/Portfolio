@@ -1,0 +1,63 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block title %}Projects - Kanchan's Portfolio{% endblock %}
+
+{% block content %}
+
+<!-- ✨ PROJECT SECTION -->
+<section id="projects" data-aos="fade-up" class="my-20 px-6 md:px-20">
+  <h2 class="text-4xl font-bold text-center text-orange-400 mb-14">✨ My Projects</h2>
+
+  <div class="grid gap-10 md:grid-cols-2">
+
+
+    <!-- 🎯 Project Card 1 -->
+    <div class="bg-[#1e293b] rounded-2xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300 group">
+      <div class="p-6 space-y-4">
+        <h3 class="text-2xl font-semibold text-orange-300 group-hover:text-orange-400">📌 Assignment Monitoring System</h3>
+        <p class="text-gray-300 leading-relaxed text-justify">
+          A Django web app where teachers post assignments and students receive email alerts. Features login authentication, assignment dashboard, and real-time notifications using Django Signals.
+        </p>
+
+        <!-- 🔧 Tech Tags -->
+        <div class="flex flex-wrap gap-2 text-xs text-orange-300">
+          <span class="bg-[#334155] px-2 py-1 rounded-full">Django</span>
+          <span class="bg-[#334155] px-2 py-1 rounded-full">MySQL</span>
+          <span class="bg-[#334155] px-2 py-1 rounded-full">Bootstrap</span>
+          <span class="bg-[#334155] px-2 py-1 rounded-full">SMTP</span>
+        </div>
+
+        {% comment %} <!-- 🔗 Optional Button -->
+        <div class="pt-3">
+          <a href="#" class="text-sm text-orange-400 hover:underline">🔗 GitHub Link (optional)</a>
+        </div>
+      </div>
+    </div> {% endcomment %}
+
+    <!-- 🎯 Project Card 2 -->
+    <div class="bg-[#1e293b] rounded-2xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300 group">
+      <div class="p-6 space-y-4">
+        <h3 class="text-2xl font-semibold text-orange-300 group-hover:text-orange-400">🚗 Gesture-Controlled IoT Car</h3>
+        <p class="text-gray-300 leading-relaxed text-justify">
+          Control a robot car using hand gestures via webcam. Built with OpenCV and MediaPipe for gesture recognition and ESP8266 for real-time movement via WebSockets.
+        </p>
+
+        <!-- 🔧 Tech Tags -->
+        <div class="flex flex-wrap gap-2 text-xs text-orange-300">
+          <span class="bg-[#334155] px-2 py-1 rounded-full">Python</span>
+          <span class="bg-[#334155] px-2 py-1 rounded-full">OpenCV</span>
+          <span class="bg-[#334155] px-2 py-1 rounded-full">MediaPipe</span>
+          <span class="bg-[#334155] px-2 py-1 rounded-full">ESP8266</span>
+        </div>
+{% comment %} 
+        <!-- 🔗 Optional Button -->
+        <div class="pt-3">
+          <a href="#" class="text-sm text-orange-400 hover:underline">🔗 Demo Video (optional)</a>
+        </div>
+      </div>
+    </div> {% endcomment %}
+
+  </div>
+</section>
+
+{% endblock %}

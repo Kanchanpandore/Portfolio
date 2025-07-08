@@ -1,0 +1,128 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>{% block title %}Portfolio{% endblock %}</title>
+
+ <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS & Typed.js -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body id="app" class="bg-[#0f172a] text-white font-sans">
+
+  <!-- ✅ Navigation Bar -->
+  <nav class="bg-[#1e293b]/60 backdrop-blur-md px-6 md:px-10 py-4 flex justify-between items-center sticky top-0 z-50 shadow-md relative">
+    <h1 class="text-xl font-bold">Kanchan</h1>
+
+    <!-- 🍔 Hamburger Menu Button (mobile only) -->
+    <button @click="isMenuOpen = !isMenuOpen" class="md:hidden text-2xl text-white focus:outline-none">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- 🔗 Desktop Menu -->
+    <ul class="hidden md:flex gap-6 font-semibold">
+      <li><a href="#home" :class="activeSection === 'home' ? activeClass : normalClass">Home</a></li>
+      <li><a href="#skills" :class="activeSection === 'skills' ? activeClass : normalClass">Skills</a></li>
+      <li><a href="#projects" :class="activeSection === 'projects' ? activeClass : normalClass">Projects</a></li>
+      <li><a href="#about" :class="activeSection === 'about' ? activeClass : normalClass">About</a></li>
+      <li><a href="#contact" :class="activeSection === 'contact' ? activeClass : normalClass">Contact</a></li>
+    </ul>
+
+    <!-- 📱 Mobile Dropdown Menu -->
+    <ul v-if="isMenuOpen" class="absolute top-full left-0 w-full bg-[#1e293b] flex flex-col gap-4 text-center py-4 md:hidden font-semibold">
+      <li><a href="#home" @click="isMenuOpen = false" :class="activeSection === 'home' ? activeClass : normalClass">Home</a></li>
+      <li><a href="#skills" @click="isMenuOpen = false" :class="activeSection === 'skills' ? activeClass : normalClass">Skills</a></li>
+      <li><a href="#projects"@click="isMenuOpen = false" :class="activeSection === 'skills' ? activeClass : normalClass">Projects</a></li>
+      <li><a href="#about" @click="isMenuOpen = false" :class="activeSection === 'about' ? activeClass : normalClass">About</a></li>
+      <li><a href="#contact" @click="isMenuOpen = false" :class="activeSection === 'contact' ? activeClass : normalClass">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ Page Content -->
+  {% block content %}
+  {% endblock %}
+
+  <!-- ✅ Footer -->
+  <footer class="bg-[#1e293b] text-center py-4 mt-10 text-sm">
+    © 2025 Kanchan. All rights reserved.
+  </footer>
+
+  <!-- ✅ AOS Animation Init -->
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- ✅ Typed.js Init -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Typed('#typed-text', {
+        strings: ['Web Developer', 'UI Designer', 'Coder', 'Tech Enthusiast'],
+        typeSpeed: 60,
+        backSpeed: 30,
+        loop: true,
+      });
+    });
+  </script>
+
+  <!-- ✅ Vue App Init for Scrollspy & Menu Toggle -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          isMenuOpen: false,
+          activeSection: 'home',
+          sections: ['home', 'skills', 'projects', 'about', 'contact'],
+          activeClass: 'text-orange-400 border-b-2 border-orange-400 pb-1',
+          normalClass: 'hover:text-orange-400'
+        };
+      },
+      mounted() {
+        window.addEventListener('scroll', this.onScroll);
+        this.onScroll(); // initial run
+      },
+      methods: {
+        onScroll() {
+          const scrollY = window.scrollY;
+          let found = false;
+          for (let id of this.sections) {
+            const el = document.getElementById(id);
+            if (el) {
+              const offset = el.offsetTop - 150;
+              const height = el.offsetHeight;
+              if (scrollY >= offset && scrollY < offset + height) {
+                this.activeSection = id;
+                found = true;
+                break;
+              }
+            }
+          }
+          if (!found && scrollY < 200) {
+            this.activeSection = 'home';
+          }
+        }
+      }
+    }).mount('#app');
+  </script>
+
+</body>
+</html>

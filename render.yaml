@@ -1,0 +1,14 @@
+# render.yaml
+services:
+  - type: web
+    name: Kanchan-Portfolio
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn myportfolio.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: myportfolio.settings
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: false
