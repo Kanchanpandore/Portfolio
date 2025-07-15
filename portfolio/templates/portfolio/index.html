@@ -51,24 +51,16 @@
 
 
 
-
     <!-- ✅ Right Side: Oval + Image -->
-    <div class="md:w-1/2 flex justify-center mb-10 md:mb-0">
-      <div class="relative w-[320px] md:w-[450px] h-[450px]"> 
+<div class="md:w-1/2 flex justify-center mb-10 md:mb-0">
+  <div class="relative w-[320px] md:w-[500px] h-[550px]"> <!-- Increased container size -->
 
-        <!-- Tilted Oval -->
-        <img src="{% static 'img/oval.png' %}" alt="Tilted Oval"
-             class="absolute top-[38%] left-1/2 w-[120%] -translate-x-1/2 -translate-y-1/2 rotate-[25deg] z-0">
+    <!-- 📸 Your Image (Larger + Centered) -->
+    <img src="{% static 'img/k3.png' %}" alt="Kanchan"
+         class="absolute top-1/2 left-1/2 h-[520px] md:h-[540px] w-auto -translate-x-1/2 -translate-y-1/2 z-10 object-contain">
 
-        <!-- Your Image -->
-        {% comment %} <img src="{% static 'img/k1.png' %}" alt="Kanchan"
-             class="absolute top-[34%] left-[42%] w-[110%] md:w-[114%] -translate-x-1/2 -translate-y-1/2 z-10 object-contain"> {% endcomment %}
-
-             <img src="{% static 'img/k1.png' %}" alt="Kanchan"
-     class="absolute top-[34%] left-[42%] h-[480px] w-auto -translate-x-1/2 -translate-y-1/2 z-10 object-contain">
-
-      </div>
-    </div> 
+  </div>
+</div>
 
 
   </section>
@@ -164,7 +156,7 @@
 
     <!-- 📌 Project 1 -->
     <div class="bg-[#1e293b]/60 backdrop-blur-xl border border-white/10 rounded-2xl shadow-lg p-6 text-left hover:shadow-orange-500/20 transition hover:scale-[1.02] duration-300">
-      <h3 class="text-xl font-bold text-orange-300 mb-2 flex items-center gap-2"> Assignment Monitoring System</h3>
+      <h3 class="text-xl font-bold text-orange-300 mb-4 flex items-center gap-2"> Assignment Monitoring System</h3>
       <p class="text-gray-300 mb-4 leading-relaxed">
         A Django web app where teachers post assignments and students receive email alerts. Features login authentication, assignment dashboard, and real-time notifications using Django Signals.
       </p>
@@ -178,7 +170,7 @@
 
     <!-- 🚗 Project 2 -->
     <div class="bg-[#1e293b]/60 backdrop-blur-xl border border-white/10 rounded-2xl shadow-lg p-6 text-left hover:shadow-orange-500/20 transition hover:scale-[1.02] duration-300">
-      <h3 class="text-xl font-bold text-orange-300 mb-2 flex items-center gap-2">Gesture-Controlled IoT Car</h3>
+      <h3 class="text-xl font-bold text-orange-300 mb-4 flex items-center gap-2">Gesture-Controlled IoT Car</h3>
       <p class="text-gray-300 mb-4 leading-relaxed">
         Control a robot car using hand gestures via webcam. Built with OpenCV and MediaPipe for gesture recognition and ESP8266 for real-time movement via WebSockets.
       </p>
@@ -209,7 +201,7 @@
     </p>
 
     <p class="text-lg leading-relaxed">
-    I have hands-on experience with HTML, CSS, C++, and currently exploring Data Science, AI, and web development using Django.
+    I have hands-on experience with HTML, CSS, C++,Java and currently exploring Data Science, AI, and web development using Django.
     My goal is to work on real-world projects, participate in hackathons, and discover the tech field that excites me the most.
     </p>
 
@@ -228,6 +220,9 @@
 </section>
 
 
+
+
+
 <!-- ✅ Contact Section -->
 <section id="contact" data-aos="fade-up" class="py-20 px-4 bg-[#0f172a] text-white text-center">
   <h2 class="text-4xl font-bold text-orange-400 mb-12">Let's Get in Touch</h2>
@@ -236,30 +231,33 @@
   <div class="mx-auto w-full max-w-2xl bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl shadow-2xl p-8 transition-all duration-300 hover:shadow-orange-400/20">
 
     <!-- 🔗 GitHub -->
-    <div class="mb-6 flex items-center justify-start gap-4 text-lg hover:scale-105 transition-transform duration-300">
-      <i class="fab fa-github text-orange-400 text-2xl animate-pulse"></i>
-      <a href="https://github.com/Kanchanpandore" target="_blank" class="hover:underline break-all">
+    <div class="mb-6 text-lg hover:scale-105 transition-transform duration-300 text-center">
+      <a href="https://github.com/Kanchanpandore" target="_blank"
+         class="inline-flex items-center justify-center gap-4 hover:underline break-all text-white">
+        <i class="fab fa-github text-orange-400 text-2xl animate-pulse"></i>
         github.com/Kanchanpandore
       </a>
     </div>
 
     <!-- 🔗 LinkedIn -->
-    <div class="mb-6 flex items-center justify-start gap-4 text-lg hover:scale-105 transition-transform duration-300">
-      <i class="fab fa-linkedin text-orange-400 text-2xl animate-pulse"></i>
-      <a href="https://www.linkedin.com/in/kanchan-pandore-33450928a/" target="_blank" class="hover:underline break-all">
+    <div class="mb-6 text-lg hover:scale-105 transition-transform duration-300 text-center">
+      <a href="https://www.linkedin.com/in/kanchan-pandore-33450928a/" target="_blank"
+         class="inline-flex items-center justify-center gap-4 hover:underline break-all text-white">
+        <i class="fab fa-linkedin text-orange-400 text-2xl animate-pulse"></i>
         linkedin.com/in/kanchan-pandore
       </a>
     </div>
 
     <!-- ✉️ Email -->
-    <div class="mb-6 flex items-center justify-start gap-4 text-lg hover:scale-105 transition-transform duration-300">
-      <i class="fas fa-envelope text-orange-400 text-2xl animate-pulse"></i>
-      <a href="mailto:kanchanpandore31@gmail.com" class="hover:underline break-all">
+    <div class="mb-6 text-lg hover:scale-105 transition-transform duration-300 text-center">
+      <a href="mailto:kanchanpandore31@gmail.com"
+         class="inline-flex items-center justify-center gap-4 hover:underline break-all text-white">
+        <i class="fas fa-envelope text-orange-400 text-2xl animate-pulse"></i>
         kanchanpandore31@gmail.com
       </a>
     </div>
 
-    <!-- 💬 CTA Button -->
+    <!-- CTA Button -->
     <div class="mt-8">
       <a href="mailto:kanchanpandore31@gmail.com"
          class="px-6 py-3 bg-orange-500 hover:bg-orange-600 rounded-full shadow-lg text-white font-semibold transition-all duration-300 hover:shadow-orange-400">
